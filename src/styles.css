@@ -54,7 +54,7 @@ footer {
       rgba(55, 49, 99, 0.5),
       rgba(233, 213, 202, 0.7)
     ),
-    url("images/starry night 2.jpg");
+    url("../images/starry night 2.jpg");
   object-fit: contain;
 }
 
