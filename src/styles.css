@@ -40,6 +40,11 @@ i {
 a {
   text-decoration: none;
 }
+footer {
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+  text-size: 18px;
+}
 .container-card {
   padding: 1em 3em;
 }
