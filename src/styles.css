@@ -1,0 +1,110 @@
+body {
+  font-family: sans-serif;
+}
+h1,
+h2,
+h5 {
+  font-family: "Space Grotesk", sans-serif;
+}
+h1 {
+  font-size: 75px;
+  margin-top: 55px;
+  margin-left: 30px;
+  color: white;
+}
+h5 {
+  opacity: 50%;
+}
+h2,
+h5,
+p,
+i,
+.weather-condition {
+  color: rgb(55, 49, 99);
+}
+h5,
+h6 {
+  text-align: center;
+}
+p,
+.weather-condition {
+  font-family: "JetBrains Mono", monospace;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+i {
+  font-size: 35px;
+  margin: 50px 0 0;
+}
+a {
+  text-decoration: none;
+}
+.container-card {
+  padding: 1em 3em;
+}
+.container-card-border {
+  border: none;
+  background-image: linear-gradient(
+      rgba(55, 49, 99, 0.5),
+      rgba(233, 213, 202, 0.7)
+    ),
+    url("images/starry night 2.jpg");
+  object-fit: contain;
+}
+
+input.enter-a-city-search {
+  font-family: "JetBrains Mono", monospace;
+}
+
+button.search-button {
+  margin: 0px 8px 0px 0px;
+  font-family: "JetBrains Mono", monospace;
+}
+input.current-city-button {
+  font-family: "JetBrains Mono", monospace;
+}
+.current-city-weather {
+  display: flex;
+  justify-content: space-evenly;
+}
+.current-weather-emoji {
+  margin: 0 18px;
+}
+#precipitation,
+#humidity,
+#wind {
+  margin: -2px 0 0 175px;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+}
+.cr-body {
+  width: 23rem;
+  margin-top: 55px;
+  padding: 0;
+}
+.cr-inside-body {
+  width: 39rem;
+  padding: 18px 16px 0 40px;
+}
+.monday-card-border,
+.tuesday-card-border,
+.wednesday-card-border,
+.thursday-card-border,
+.friday-card-border {
+  margin: 20px 0;
+  border: none;
+}
+.monday-card,
+.tuesday-card,
+.wednesday-card,
+.thursday-card,
+.friday-card {
+  padding: 30px 45px;
+}
+p.degrees {
+  text-align: center;
+  margin: 65px 0 0;
+  font-size: 18px;
+  color: rgb(55, 49, 99);
+}

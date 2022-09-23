@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Weather Application</title>
+	<meta charset="UTF-8" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+	<link rel="stylsheet" href="src/styles.css" />
+	<script src="https://kit.fontawesome.com/7f29738d2f.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&family=JetBrains+Mono:wght@200;300&family=Noto+Serif+Display:wght@500;600&family=Playfair+Display:wght@700&family=Source+Code+Pro:wght@500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div id="app"></div>
+
+		<div class="card container-card-border">
+			<div class="card-body container-card">
+
+
+				<nav class="navbar navbar-expand-lg bg-muted">
+					<div class="container-fluid">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+								<form class="d-flex" role="search">
+									<input class="form-control me-2 enter-a-city-search" type="text"
+										placeholder="Enter a city" />
+									<button class="btn btn-primary search-button" type="submit">
+										Search
+									</button>
+									<input type="submit" value="Current City"
+										class="btn btn-outline-primary current-city-button" />
+								</form>
+						</div>
+					</div>
+				</nav>
+
+				<div class="row current-city-weather">
+					<div class="col-6">
+						<h1><span class="current-weather-emoji">🌘</span><span id="temperature">66</span>
+							<span class="units">
+								<a href="#" id="fahrenheit-link">°F</a> |
+								<a href="#" id="celcius-link">°C</a></span>
+						</h1>
+						<p>
+						<div id=precipitation>Precipitation: 2%</div>
+						<div id=humidity>Humidity: 88%</div>
+						<div id=wind>Wind: 4 mph</div>
+						</p>
+					</div>
+					<div class="card cr-body shadow p-3 mb-5 bg-body rounded">
+						<div class="card-body cr-inside-body">
+							<div class="col-6">
+								<h2>Cedar Rapids, IA</h2>
+								<p id="date-and-time">Sunday 11:00 PM
+								<div class="weather-condition">Clear with periodic clouds</div>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col">
+						<div class="card monday-card-border shadow p-3 mb-5 bg-body rounded">
+							<div class="card-body monday-card">
+								<h5>Mon</h5>
+								<h6><i class="fa-solid fa-cloud-sun"></i></h6>
+								<p class="degrees">81 °F</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card tuesday-card-border shadow p-3 mb-5 bg-body rounded">
+							<div class="card-body tuesday-card">
+								<h5>Tue</h5>
+								<h6><i class="fa-solid fa-sun"></i></h6>
+								<p class="degrees">82 °F</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card wednesday-card-border shadow p-3 mb-5 bg-body rounded">
+							<div class="card-body wednesday-card">
+								<h5>Wed</h5>
+								<h6><i class="fa-solid fa-cloud-sun-rain"></i></h6>
+								<p class="degrees">85 °F</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card thursday-card-border shadow p-3 mb-5 bg-body rounded">
+							<div class="card-body thursday-card">
+								<h5>Thu</h5>
+								<h6><i class="fa-solid fa-cloud-bolt"></i></h6>
+								<p class="degrees">80 °F</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="card friday-card-border shadow p-3 mb-5 bg-body rounded">
+							<div class="card-body friday-card">
+								<h5>Fri</h5>
+								<h6><i class="fa-solid fa-cloud-bolt"></i></h6>
+								<p class="degrees">79 °F</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<script src="src/date&weather.js"></script>
+
+	</div>
+</body>
+
+</html>
