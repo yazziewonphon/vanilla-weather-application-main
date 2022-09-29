@@ -85,7 +85,7 @@ function showWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
-  let weatherCondiitonIcon = document.querySelector(".current-weather-emoji");
+  let weatherConditionIcon = document.querySelector(".current-weather-emoji");
   weatherConditionIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
