@@ -85,6 +85,15 @@ function showWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
+  let weatherCondiitonIcon = document.querySelector(".current-weather-emoji");
+  weatherConditionIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherConditionIcon.setAttribute(
+    "alt",
+    response.data.weather[0].description
+  );
   let cityName = response.data.name;
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
