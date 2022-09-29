@@ -44,9 +44,10 @@ footer {
   text-align: left;
   font-family: "JetBrains Mono", monospace;
   font-size: 18px;
+  margin: -30px 0 0 0;
 }
 .container-card {
-  padding: 1em 3em;
+  padding: 2em 1em 0 1em;
 }
 .container-card-border {
   border: none;
