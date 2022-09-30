@@ -94,28 +94,14 @@ function showWeather(response) {
     "alt",
     response.data.weather[0].description
   );
-  let state = response.geo.state;
   let cityName = response.data.name;
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
   temperatureElement.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].description;
-  currentCity.innerHTML = `${cityName}, ${state} ${cityCountry}`;
+  currentCity.innerHTML = `${cityName}, ${cityCountry}`;
 }
-
-function searchNewState(state) {
-  let apiKey = "281450ec88936f4fa8ee9864682b49a0";
-  let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${state}&limit=1&appid=${apiKey}`;
-  axios.get(apiUrl).then(showWeather);
-}
-
-function handleSubmitTwo(event) {
-  event.preventDefault();
-  let state = document.querySelector(".enter-a-city-search").value;
-  searchNewState(state);
-}
-
 function searchNewCity(city) {
   let apiKey = "281450ec88936f4fa8ee9864682b49a0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -128,7 +114,7 @@ function handleSubmit(event) {
   searchNewCity(city);
 }
 let searchForm = document.querySelector(".d-flex");
-searchForm.addEventListener("submit", handleSubmit && handleSubmitTwo);
+searchForm.addEventListener("submit", handleSubmit);
 
 function searchCurrentPosition(position) {
   let latitude = position.coords.latitude;
