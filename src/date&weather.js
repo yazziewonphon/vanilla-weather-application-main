@@ -112,7 +112,7 @@ function searchNewState(state) {
 
 function handleSubmitTwo(event) {
   event.preventDefault();
-  let state = doucment.querySelector(".enter-a-city-search").value;
+  let state = document.querySelector(".enter-a-city-search").value;
   searchNewState(state);
 }
 
