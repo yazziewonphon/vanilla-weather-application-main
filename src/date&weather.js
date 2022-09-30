@@ -106,7 +106,7 @@ function showWeather(response) {
 
 function searchNewState(state) {
   let apiKey = "281450ec88936f4fa8ee9864682b49a0";
-  let apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${state}&limit=1&appid=${apiKey}`;
+  let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${state}&limit=1&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
 
