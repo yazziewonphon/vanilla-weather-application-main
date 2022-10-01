@@ -50,21 +50,6 @@ function search(event) {
   }
 }
 
-let form = document.querySelector(".d-flex");
-form.addEventListener("submit", search);
-
-function convertCelcius(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector("#temperature");
-  let celcius = (currentTemperature - 32 * 5) / 9;
-  currentTemperature.innerHTML = Math.round(celcius);
-}
-
-let fahrenheitTemperature = null;
-
-let celciusUnit = document.querySelector("#celcius-link");
-celciusUnit.addEventListener("click", convertCelcius);
-
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
@@ -100,11 +85,26 @@ function searchNewCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector(".enter-a-city-search").value;
-  searchNewCity(city);
+  let cityInputElement = document.querySelector(".enter-a-city-search");
+  searchNewCity(cityInputElement.value);
 }
 let searchForm = document.querySelector(".d-flex");
 searchForm.addEventListener("submit", handleSubmit);
+
+function convertCelcius(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#temperature");
+  let celcius = (currentTemperature - 32 * 5) / 9;
+  currentTemperature.innerHTML = Math.round(celcius);
+}
+
+let fahrenheitTemperature = null;
+
+let form = document.querySelector(".d-flex");
+form.addEventListener("submit", search);
+
+let celciusUnit = document.querySelector("#celcius-link");
+celciusUnit.addEventListener("click", convertCelcius);
 
 function searchCurrentPosition(position) {
   let latitude = position.coords.latitude;
