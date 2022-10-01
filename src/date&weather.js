@@ -93,15 +93,18 @@ searchForm.addEventListener("submit", handleSubmit);
 function convertCelcius(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
-  let celciusUnit = document.querySelector("#celcius-link");
   let celcius = (currentTemperature - 32 * 5) / 9;
   currentTemperature.innerHTML = Math.round(celcius);
+  celciusUnit.classList.remove("active");
+  fahrenheitUnit.classList.add("active");
 }
 
 function convertFahrenheit(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+  celciusUnit.classList.remove("active");
+  fahrenheitUnit.classList.add("active");
 }
 
 let fahrenheitTemperature = null;
