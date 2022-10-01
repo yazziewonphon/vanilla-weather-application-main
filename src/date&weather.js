@@ -98,6 +98,12 @@ function convertCelcius(event) {
   currentTemperature.innerHTML = Math.round(celcius);
 }
 
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#temperature");
+  currentTemperature.innerHTML = fahrenheitTemperature;
+}
+
 let fahrenheitTemperature = null;
 
 let form = document.querySelector(".d-flex");
@@ -105,6 +111,9 @@ form.addEventListener("submit", search);
 
 let celciusUnit = document.querySelector("#celcius-link");
 celciusUnit.addEventListener("click", convertCelcius);
+
+let fahrenheitUnit = document.querySelector("#fahrenheit-link");
+fahrenheitUnit.addEventListener("click", convertFahrenheit);
 
 function searchCurrentPosition(position) {
   let latitude = position.coords.latitude;
