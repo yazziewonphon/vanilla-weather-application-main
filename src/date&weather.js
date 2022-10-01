@@ -101,12 +101,12 @@ searchForm.addEventListener("submit", handleSubmit);
 
 //Unit Conversion
 
-function convertCelcius(event) {
+function convertCelsius(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
-  let celcius = (currentTemperature - 32 * 5) / 9;
-  currentTemperature.innerHTML = Math.round(celcius);
-  celciusUnit.classList.remove("active");
+  let celsius = (currentTemperature - 32 * 5) / 9;
+  currentTemperature.innerHTML = Math.round(celsius);
+  celsiusUnit.classList.remove("active");
   fahrenheitUnit.classList.add("active");
 }
 
@@ -114,7 +114,7 @@ function convertFahrenheit(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
-  celciusUnit.classList.remove("active");
+  celsiusUnit.classList.remove("active");
   fahrenheitUnit.classList.add("active");
 }
 
@@ -123,8 +123,8 @@ let fahrenheitTemperature = null;
 let form = document.querySelector(".d-flex");
 form.addEventListener("submit", search);
 
-let celciusUnit = document.querySelector("#celcius-link");
-celciusUnit.addEventListener("click", convertCelcius);
+let celsiusUnit = document.querySelector("#celsius-link");
+celsiusUnit.addEventListener("click", convertCelsius);
 
 let fahrenheitUnit = document.querySelector("#fahrenheit-link");
 fahrenheitUnit.addEventListener("click", convertFahrenheit);
