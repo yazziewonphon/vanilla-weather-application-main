@@ -1,3 +1,5 @@
+//Date & Time
+
 let currentTime = new Date();
 let date = currentTime.getDate();
 
@@ -37,6 +39,8 @@ let month = months[currentTime.getMonth()];
 let newTime = document.querySelector("#date-and-time");
 newTime.innerHTML = `${day} ${month}, ${date} | ${currentHours}:${currentMinutes}`;
 
+//Enter New City in Form
+
 function search(event) {
   event.preventDefault();
   let enterCity = document.querySelector(".enter-a-city-search");
@@ -49,6 +53,8 @@ function search(event) {
     alert("Please enter a city.");
   }
 }
+
+//Display New Weather & City
 
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
@@ -76,6 +82,9 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
 }
+
+//Weather API
+
 function searchNewCity(city) {
   let apiKey = "281450ec88936f4fa8ee9864682b49a0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -89,6 +98,8 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector(".d-flex");
 searchForm.addEventListener("submit", handleSubmit);
+
+//Unit Conversion
 
 function convertCelcius(event) {
   event.preventDefault();
@@ -117,6 +128,8 @@ celciusUnit.addEventListener("click", convertCelcius);
 
 let fahrenheitUnit = document.querySelector("#fahrenheit-link");
 fahrenheitUnit.addEventListener("click", convertFahrenheit);
+
+//Geolocation API
 
 function searchCurrentPosition(position) {
   let latitude = position.coords.latitude;
