@@ -121,5 +121,3 @@ function fetchCurrentPosition(event) {
 }
 let currentCityBtn = document.querySelector(".current-city-button");
 currentCityBtn.addEventListener("click", fetchCurrentPosition);
-
-search("Cedar Rapids");
