@@ -101,7 +101,7 @@ function convertCelcius(event) {
 function convertFahrenheit(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = fahrenheitTemperature;
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitTemperature = null;
