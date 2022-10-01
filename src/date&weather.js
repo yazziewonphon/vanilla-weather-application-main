@@ -106,8 +106,8 @@ function convertCelsius(event) {
   let currentTemperature = document.querySelector("#temperature");
   let celsius = (currentTemperature - 32 * 5) / 9;
   currentTemperature.innerHTML = Math.round(celsius);
-  celsiusUnit.classList.remove("active");
-  fahrenheitUnit.classList.add("active");
+  celsiusUnit.classList.add("active");
+  fahrenheitUnit.classList.remove("active");
 }
 
 function convertFahrenheit(event) {
