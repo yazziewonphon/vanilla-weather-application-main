@@ -55,33 +55,22 @@ form.addEventListener("submit", search);
 
 function convertCelcius(event) {
   event.preventDefault();
-  let tempCelcius = document.querySelector("#celcius-link");
   let currentTemperature = document.querySelector("#temperature");
-  let celcius = Math.round(((66 - 32) * 5) / 9);
-  if (tempCelcius) {
-    currentTemperature.innerHTML = `${celcius}`;
-  }
+  let celcius = (currentTemperature - 32 * 5) / 9;
+  currentTemperature.innerHTML = Math.round(celcius);
 }
 
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let tempFahrenheit = document.querySelector("#fahrenheit-link");
-  let currentTemperature = document.querySelector("#temperature");
-  if (tempFahrenheit) {
-    currentTemperature.innerHTML = `66`;
-  }
-}
+let fahrenheitTemperature = null;
 
 let celciusUnit = document.querySelector("#celcius-link");
 celciusUnit.addEventListener("click", convertCelcius);
 
-let fahrenheitUnit = document.querySelector("#fahrenheit-link");
-fahrenheitUnit.addEventListener("click", convertFahrenheit);
+ let tempCelcius = document.querySelector("#celcius-link");
 
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(fahrenheitTemperature);
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
@@ -94,6 +83,9 @@ function showWeather(response) {
     "alt",
     response.data.weather[0].description
   );
+
+fahrenheitTemperature = response.data.main.temp;
+
   let cityName = response.data.name;
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
