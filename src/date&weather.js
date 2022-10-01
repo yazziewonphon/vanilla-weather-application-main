@@ -65,8 +65,6 @@ let fahrenheitTemperature = null;
 let celciusUnit = document.querySelector("#celcius-link");
 celciusUnit.addEventListener("click", convertCelcius);
 
-search("Cedar Rapids");
-
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
@@ -123,3 +121,5 @@ function fetchCurrentPosition(event) {
 }
 let currentCityBtn = document.querySelector(".current-city-button");
 currentCityBtn.addEventListener("click", fetchCurrentPosition);
+
+search("Cedar Rapids");
