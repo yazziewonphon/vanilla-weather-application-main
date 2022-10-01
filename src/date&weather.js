@@ -104,7 +104,7 @@ searchForm.addEventListener("submit", handleSubmit);
 function convertCelsius(event) {
   event.preventDefault();
   let currentTemperature = document.querySelector("#temperature");
-  let celsius = (currentTemperature - 32 * 5) / 9;
+  let celsius = (5 / 9) * (Math.round(fahrenheitTemperature) - 32);
   currentTemperature.innerHTML = Math.round(celsius);
   celsiusUnit.classList.add("active");
   fahrenheitUnit.classList.remove("active");
