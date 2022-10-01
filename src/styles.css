@@ -114,6 +114,9 @@ input.current-city-button {
 p.degrees {
   text-align: center;
   margin: 65px 0 0;
-  font-size: 18px;
+  font-size: 15px;
   color: rgb(55, 49, 99);
+}
+.weather-forecast-temperature-min {
+  color: rgba(55, 49, 99, 0.8);
 }
