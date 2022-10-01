@@ -109,12 +109,12 @@ input.current-city-button {
 .wednesday-card,
 .thursday-card,
 .friday-card {
-  padding: 6px 45px;
+  padding: 6px 36px;
 }
 p.degrees {
   text-align: center;
   margin: 65px 0 0;
-  font-size: 12px;
+  font-size: 18px;
   color: rgb(55, 49, 99);
 }
 .weather-forecast-temperature-min {
