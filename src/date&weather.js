@@ -54,6 +54,91 @@ function search(event) {
   }
 }
 
+//Display Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+
+  forecastElement.innerHTML = `<div class="row">
+      <div class="col">
+        <div class="card monday-card-border shadow p-3 mb-5 bg-body rounded">
+          <div class="card-body monday-card">
+            <h5>Mon</h5>
+            <h6>
+              <i class="fa-solid fa-cloud-sun"></i>
+            </h6>
+            <p class="degrees">
+              <span class="weather-forecast-temperature-max">81 °F</span> |
+              <span class="weather-forecast-temperature-min">79 °F</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card tuesday-card-border shadow p-3 mb-5 bg-body rounded">
+          <div class="card-body tuesday-card">
+            <h5>Tue</h5>
+            <h6>
+              <i class="fa-solid fa-sun"></i>
+            </h6>
+            <p class="degrees">
+              <span class="weather-forecast-temperature-max">82 °F</span> |
+              <span class="weather-forecast-temperature-min">80 °F</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card wednesday-card-border shadow p-3 mb-5 bg-body rounded">
+          <div class="card-body wednesday-card">
+            <h5>Wed</h5>
+            <h6>
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+            </h6>
+            <p class="degrees">
+              <span class="weather-forecast-temperature-max">85 °F</span> |
+              <span class="weather-forecast-temperature-min">80 °F</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card thursday-card-border shadow p-3 mb-5 bg-body rounded">
+          <div class="card-body thursday-card">
+            <h5>Thu</h5>
+            <h6>
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </h6>
+            <p class="degrees">
+              <span class="weather-forecast-temperature-max">80 °F</span> |
+              <span class="weather-forecast-temperature-min">78 °F</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card friday-card-border shadow p-3 mb-5 bg-body rounded">
+          <div class="card-body friday-card">
+            <h5>Fri</h5>
+            <h6>
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </h6>
+            <p class="degrees">
+              <span class="weather-forecast-temperature-max">79 °F</span> |
+              <span class="weather-forecast-temperature-min">75 °F</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  
+}
+
 //Display New Weather & City
 
 function showWeather(response) {
@@ -72,6 +157,8 @@ function showWeather(response) {
   );
 
   fahrenheitTemperature = response.data.main.temp;
+
+   displayForecast();
 
   let cityName = response.data.name;
   let cityCountry = response.data.sys.country;
