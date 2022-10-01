@@ -59,7 +59,6 @@ function search(event) {
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
-  let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
   let weatherConditionIcon = document.querySelector(".current-weather-emoji");
@@ -78,6 +77,7 @@ function showWeather(response) {
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
