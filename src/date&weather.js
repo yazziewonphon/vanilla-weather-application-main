@@ -45,7 +45,7 @@ function search(event) {
   if (enterCity.value) {
     h2.innerHTML = `${enterCity.value}`;
   } else {
-    h2.innerHTML = `Unkown city`;
+    h2.innerHTML = `Unknown city`;
     alert("Please enter a city.");
   }
 }
@@ -53,7 +53,6 @@ function search(event) {
 function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
-  let temperature = Math.round(fahrenheitTemperature);
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
@@ -73,7 +72,7 @@ function showWeather(response) {
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
-  temperatureElement.innerHTML = `${temperature}`;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
 }
