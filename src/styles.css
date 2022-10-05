@@ -76,7 +76,7 @@ input.current-city-button {
   justify-content: space-evenly;
 }
 .current-weather-emoji {
-  margin: 0 18px;
+  margin: 0 10px;
 }
 #humidity,
 #wind {
