@@ -56,7 +56,7 @@ function search(event) {
 
 //Display Forecast
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -83,6 +83,14 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+//Forecast API
+
+function getForecast(coordinates) {
+  let apiKey = "281450ec88936f4fa8ee9864682b49a0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Display New Weather & City
@@ -114,6 +122,8 @@ function showWeather(response) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
+
+  getForecast(response.data.coord);
 }
 
 //Weather API
