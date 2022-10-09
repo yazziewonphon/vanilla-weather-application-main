@@ -229,7 +229,7 @@ let isAlive = setInterval(function () {
   let cactusLeft = parseInt(
     window.getComputedStyle(cactus).getPropertyPriority("left")
   );
-
+  console.log("cactusLeft");
   //Detect Collision
   if (cactusLeft < 34 && cactusLeft > 0 && ghostTop <= 34) {
     console.log("collision");
