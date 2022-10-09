@@ -95,7 +95,7 @@ footer {
   background-image: url("../images/Cactus.png");
   background-size: 20px 25px;
 
-  animation: block 1s infinite linear;
+  animation: block 2s infinite linear;
 }
 
 @keyframes block {
