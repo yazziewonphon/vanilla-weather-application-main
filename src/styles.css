@@ -55,13 +55,13 @@ footer {
   margin: -16px -31px 20px -31px;
 }
 #ghost {
-  width: 44px;
-  height: 54px;
+  width: 24px;
+  height: 34px;
   background-image: url("../images/Ghost.png");
-  background-size: 44px 54px;
+  background-size: 24px 34px;
 
   position: relative;
-  top: 47px;
+  top: 72px;
 }
 
 .jump {
@@ -70,19 +70,19 @@ footer {
 
 @keyframes jump {
   0% {
-    top: 47px;
+    top: 72px;
   }
   30% {
-    top: 20px;
+    top: 42px;
   }
   50% {
-    top: 2px;
+    top: -6px;
   }
   80% {
-    top: 20px;
+    top: 42px;
   }
   100% {
-    top: 47px;
+    top: 72px;
   }
 }
 #cactus {
