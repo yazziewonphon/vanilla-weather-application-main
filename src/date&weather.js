@@ -231,7 +231,7 @@ let isAlive = setInterval(function () {
   );
 
   //Detect Collision
-  if (cactusLeft < 50 && cactusLeft > 0 && ghostTop >= 39) {
+  if (cactusLeft < 24 && cactusLeft > 0 && ghostTop >= 39) {
     alert("Game Over");
   }
 }, 10);
