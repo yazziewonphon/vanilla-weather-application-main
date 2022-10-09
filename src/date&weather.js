@@ -137,8 +137,8 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
 
-  displayForecast();
   getForecast(response.data.coord);
+  displayForecast();
 }
 
 //Weather API
