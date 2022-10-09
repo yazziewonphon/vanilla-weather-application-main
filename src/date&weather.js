@@ -54,14 +54,22 @@ function search(event) {
   }
 }
 
+//Format Forecast Day
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 //Display Forecast
 
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  
 
-  
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay) {
     forecastHTML =
@@ -70,13 +78,19 @@ function displayForecast(response) {
       <div class="col">
         <div class="card monday-card-border shadow p-3 mb-5 bg-body rounded">
           <div class="card-body monday-card">
-            <h5>${forecastDay.dt}</h5>
+            <h5>${formatDay(forecastDay.dt)}</h5>
             <h6>
-              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png";
+              <img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png";
             </h6>
             <p class="degrees">
-              <span class="weather-forecast-temperature-max">${forecastDay.temp.max} °F</span> |
-              <span class="weather-forecast-temperature-min">${forecastDay.temp.min} °F</span>
+              <span class="weather-forecast-temperature-max">${
+                forecastDay.temp.max
+              } °F</span> |
+              <span class="weather-forecast-temperature-min">${
+                forecastDay.temp.min
+              } °F</span>
             </p>
           </div>
         </div>
