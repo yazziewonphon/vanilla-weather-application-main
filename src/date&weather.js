@@ -223,15 +223,17 @@ function jump() {
 let isAlive = setInterval(function () {
   //Get current Ghost Y position
   let ghostTop = parseInt(
-    window.getComputedStyle(ghost).getPropertyPriority("top"));
-  
-    //Get current Cactus X position
+    window.getComputedStyle(ghost).getPropertyValue("top")
+  );
+
+  //Get current Cactus X position
   let cactusLeft = parseInt(
-    window.getComputedStyle(cactus).getPropertyPriority("left"));
+    window.getComputedStyle(cactus).getPropertyValue("left")
+  );
   console.log("cactusLeft");
 
   //Detect Collision
-  if (cactusLeft < 50 && cactusLeft > 0 && ghostTop <= 140) {
+  if (cactusLeft < 24 && cactusLeft > 0 && ghostTop <= 39) {
     alert("Game Over!");
   }
 }, 10);
