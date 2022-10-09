@@ -55,13 +55,13 @@ footer {
   margin: -16px -31px 20px -31px;
 }
 #ghost {
-  width: 40px;
-  height: 50px;
+  width: 44px;
+  height: 54px;
   background-image: url("../images/Ghost.png");
-  background-size: 50px 50px;
-  
+  background-size: 44px 54px;
+
   position: relative;
-  top: 150px;
+  top: 47px;
 }
 .container-card {
   padding: 2em 1em 0 1em;
