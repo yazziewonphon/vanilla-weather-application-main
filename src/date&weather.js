@@ -233,7 +233,7 @@ let isAlive = setInterval(function () {
   console.log("cactusLeft");
 
   //Detect Collision
-  if (cactusLeft < 24 && cactusLeft > 0 && ghostTop <= 39) {
+  if (cactusLeft < 75 && cactusLeft > 0 && ghostTop <= 34) {
     alert("Game Over!");
   }
 }, 10);
