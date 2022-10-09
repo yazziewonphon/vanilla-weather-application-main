@@ -128,8 +128,6 @@ function showWeather(response) {
 
   fahrenheitTemperature = response.data.main.temp;
 
-  displayForecast();
-
   let cityName = response.data.name;
   let cityCountry = response.data.sys.country;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -139,6 +137,7 @@ function showWeather(response) {
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
 
+  displayForecast();
   getForecast(response.data.coord);
 }
 
