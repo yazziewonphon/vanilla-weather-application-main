@@ -54,7 +54,7 @@ footer {
   height: 100px;
   margin: -16px -31px 20px -31px;
 }
-.ghost {
+#ghost {
   width: 40px;
   height: 50px;
   background-image: ("../images/Ghost.png");
