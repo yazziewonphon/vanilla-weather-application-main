@@ -210,11 +210,13 @@ currentCityBtn.addEventListener("click", fetchCurrentPosition);
 let ghost = document.getElementById("ghost");
 
 function jump() {
-  ghost.classList.add("jump");
+  if (ghost.classList != "jump") {
+    ghost.classList.add("jump");
 
-  setTimeout(function () {
-    ghost.classList.remove("jump");
-  }, 300);
+    setTimeout(function () {
+      ghost.classList.remove("jump");
+    }, 300);
+  }
 }
 
 document.addEventListener("keydown", function (event) {
