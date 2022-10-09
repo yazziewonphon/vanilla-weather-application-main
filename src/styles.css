@@ -62,8 +62,10 @@ footer {
 
   position: relative;
   top: 47px;
+}
 
-  animation: jump 0.3s linear;
+.jump {
+animation: jump 0.3s linear;
 }
 
 @keyframes jump {

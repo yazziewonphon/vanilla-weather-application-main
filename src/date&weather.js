@@ -138,7 +138,6 @@ function showWeather(response) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
-  
 
   getForecast(response.data.coord);
   displayForecast();
@@ -207,3 +206,17 @@ function fetchCurrentPosition(event) {
 }
 let currentCityBtn = document.querySelector(".current-city-button");
 currentCityBtn.addEventListener("click", fetchCurrentPosition);
+
+let ghost = document.getElementById("ghost");
+
+function jump() {
+  ghost.classList.add("jump");
+
+  setTimeout(function () {
+    ghost.classList.remove("jump");
+  }, 300);
+}
+
+document.addEventListener("keydown", function (event) {
+  jump();
+});
