@@ -118,7 +118,6 @@ function showWeather(response) {
   let wind = document.querySelector("#wind");
   let description = document.querySelector(".weather-condition");
   let currentCity = document.querySelector("h2");
-  let currentCityBorder = document.querySelector(".game");
   let weatherConditionIcon = document.querySelector(".current-weather-emoji");
   weatherConditionIcon.setAttribute(
     "src",
@@ -139,7 +138,7 @@ function showWeather(response) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   description.innerHTML = response.data.weather[0].description;
   currentCity.innerHTML = `${cityName}, ${cityCountry}`;
-  currentCityBorder.innerHTML = '';
+  
 
   getForecast(response.data.coord);
   displayForecast();
