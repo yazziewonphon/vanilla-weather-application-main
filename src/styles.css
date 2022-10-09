@@ -57,9 +57,11 @@ footer {
 .ghost {
   width: 40px;
   height: 50px;
-  background-image: ("../images/ghost.png");
+  background-image: ("../images/Ghost.png");
+  background-size: 50px 50px;
+  
   position: relative;
-  top: ;
+  top: 150px;
 }
 .container-card {
   padding: 2em 1em 0 1em;
