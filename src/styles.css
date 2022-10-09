@@ -94,13 +94,16 @@ footer {
   background-image: url("../images/Cactus.png");
   background-size: 25px 31px;
 }
+.block {
+  animation: block 1s infinite;
+}
 
 @keyframes block {
   0% {
     left: 250px;
   }
   100% {
-    left: ;
+    left: -43px;
   }
 }
 .container-card {
