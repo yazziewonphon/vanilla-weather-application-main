@@ -93,7 +93,7 @@ footer {
   top: 13px;
   left: 250px;
   background-image: url("../images/Cactus.png");
-  background-size: 25px 31px;
+  background-size: 20px 25px;
 }
 .block {
   animation: block 1s infinite;
