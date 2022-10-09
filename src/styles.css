@@ -65,7 +65,7 @@ footer {
 }
 
 .jump {
-animation: jump 0.3s linear;
+  animation: jump 0.3s linear;
 }
 
 @keyframes jump {
@@ -76,7 +76,7 @@ animation: jump 0.3s linear;
     top: 20px;
   }
   50% {
-    top: 2px
+    top: 2px;
   }
   80% {
     top: 20px;
@@ -84,6 +84,15 @@ animation: jump 0.3s linear;
   100% {
     top: 47px;
   }
+}
+#cactus {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 45px;
+  left: 200px;
+  background-image: url("../images/Cactus.png");
+  background-size: 40px 50px;
 }
 .container-card {
   padding: 2em 1em 0 1em;
