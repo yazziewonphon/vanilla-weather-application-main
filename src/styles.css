@@ -46,6 +46,19 @@ footer {
   font-size: 18px;
   margin: -30px 0 0 0;
 }
+.game {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  border: 1px solid black;
+}
+.ghost {
+  width: 40px;
+  height: 50px;
+  background-image: ("../images/ghost.png");
+  position: relative;
+  top: ;
+}
 .container-card {
   padding: 2em 1em 0 1em;
 }
