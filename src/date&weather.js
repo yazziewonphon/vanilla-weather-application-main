@@ -117,7 +117,7 @@ function showWeather(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let description = document.querySelector(".weather-condition");
-  let currentCity = document.querySelector("h2", ".game");
+  let currentCity = document.querySelector("h2" && ".game");
   let weatherConditionIcon = document.querySelector(".current-weather-emoji");
   weatherConditionIcon.setAttribute(
     "src",
