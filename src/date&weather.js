@@ -226,12 +226,13 @@ let isAlive = setInterval(function () {
     window.getComputedStyle(ghost).getPropertyPriority("top")
   );
   //Get current Cactus X position
-  let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyPriority("left"));
+  let cactusLeft = parseInt(
+    window.getComputedStyle(cactus).getPropertyPriority("left")
+  );
 
   //Detect Collision
   if (cactusLeft < 50 && cactusLeft > 0 && ghostTop >= 39) {
-
-    console.log("collision");
+    alert("Game Over");
   }
 }, 10);
 
