@@ -57,24 +57,26 @@ function search(event) {
 //Display Forecast
 
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
+  
 
+  
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
       <div class="col">
         <div class="card monday-card-border shadow p-3 mb-5 bg-body rounded">
           <div class="card-body monday-card">
-            <h5>${day}</h5>
+            <h5>${forecastDay.dt}</h5>
             <h6>
-              <i class="fa-solid fa-cloud-sun"></i>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png";
             </h6>
             <p class="degrees">
-              <span class="weather-forecast-temperature-max">81 °F</span> |
-              <span class="weather-forecast-temperature-min">79 °F</span>
+              <span class="weather-forecast-temperature-max">${forecastDay.temp.max} °F</span> |
+              <span class="weather-forecast-temperature-min">${forecastDay.temp.min} °F</span>
             </p>
           </div>
         </div>
