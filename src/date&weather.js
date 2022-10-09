@@ -208,6 +208,7 @@ let currentCityBtn = document.querySelector(".current-city-button");
 currentCityBtn.addEventListener("click", fetchCurrentPosition);
 
 let ghost = document.getElementById("ghost");
+let cactus = document.getElementById("cactus");
 
 function jump() {
   if (ghost.classList != "jump") {
@@ -218,6 +219,21 @@ function jump() {
     }, 300);
   }
 }
+
+let isAlive = setInterval(function () {
+  //Get current Ghost Y position
+  let ghostTop = parseInt(
+    window.getComputedStyle(ghost).getPropertyPriority("top")
+  );
+  //Get current Cactus X position
+  let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyPriority("left"));
+
+  //Detect Collision
+  if (cactusLeft < 50 && cactusLeft > 0 && ghostTop >= 39) {
+
+    console.log("collision");
+  }
+}, 10);
 
 document.addEventListener("keydown", function (event) {
   jump();
