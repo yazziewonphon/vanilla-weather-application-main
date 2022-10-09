@@ -73,9 +73,9 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-    forecastHTML =
-      forecastHTML +
-      `
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col">
         <div class="card monday-card-border shadow p-3 mb-5 bg-body rounded">
           <div class="card-body monday-card">
@@ -88,10 +88,10 @@ function displayForecast(response) {
             <p class="degrees">
               <span class="weather-forecast-temperature-max">${Math.round(
                 forecastDay.temp.max
-              )} °F</span> |
+              )}°</span> |
               <span class="weather-forecast-temperature-min">${Math.round(
                 forecastDay.temp.min
-              )} °F</span>
+              )}°</span>
             </p>
           </div>
         </div>
