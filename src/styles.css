@@ -62,6 +62,26 @@ footer {
 
   position: relative;
   top: 47px;
+
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 47px;
+  }
+  30% {
+    top: 60px;
+  }
+  50% {
+    top: 80px
+  }
+  80% {
+    top: 60px;
+  }
+  100% {
+    top: 47px;
+  }
 }
 .container-card {
   padding: 2em 1em 0 1em;
