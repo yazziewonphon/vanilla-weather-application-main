@@ -12,6 +12,9 @@ h1 {
   margin-left: -18px;
   color: white;
 }
+h2 {
+  margin: 4px 0 0 25px;
+}
 h5 {
   opacity: 50%;
 }
