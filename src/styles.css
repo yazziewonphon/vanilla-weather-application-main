@@ -50,62 +50,6 @@ footer {
   font-size: 18px;
   margin: -30px 0 0 0;
 }
-.game {
-  width: max-content;
-  height: 100px;
-  margin: -16px -31px 20px -31px;
-}
-#ghost {
-  width: 24px;
-  height: 34px;
-  background-image: url("../images/Ghost.png");
-  background-size: 24px 34px;
-
-  position: relative;
-  top: 39px;
-}
-
-.jump {
-  animation: jump 0.3s linear;
-}
-
-@keyframes jump {
-  0% {
-    top: 39px;
-  }
-  30% {
-    top: -5px;
-  }
-  50% {
-    top: -40px;
-  }
-  80% {
-    top: -5px;
-  }
-  100% {
-    top: 39px;
-  }
-}
-#cactus {
-  width: 20px;
-  height: 25px;
-  position: relative;
-  top: 13px;
-  left: 250px;
-  background-image: url("../images/Cactus.png");
-  background-size: 20px 25px;
-
-  animation: block 2s infinite linear;
-}
-
-@keyframes block {
-  0% {
-    left: 250px;
-  }
-  100% {
-    left: -79px;
-  }
-}
 .container-card {
   padding: 2em 1em 0 1em;
 }

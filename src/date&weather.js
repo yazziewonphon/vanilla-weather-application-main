@@ -206,37 +206,3 @@ function fetchCurrentPosition(event) {
 }
 let currentCityBtn = document.querySelector(".current-city-button");
 currentCityBtn.addEventListener("click", fetchCurrentPosition);
-
-let ghost = document.getElementById("ghost");
-let cactus = document.getElementById("cactus");
-
-function jump() {
-  if (ghost.classList != "jump") {
-    ghost.classList.add("jump");
-
-    setTimeout(function () {
-      ghost.classList.remove("jump");
-    }, 300);
-  }
-}
-
-let isAlive = setInterval(function () {
-  //Get current Ghost Y position
-  let ghostTop = parseInt(
-    window.getComputedStyle(ghost).getPropertyValue("top")
-  );
-
-  //Get current Cactus X position
-  let cactusLeft = parseInt(
-    window.getComputedStyle(cactus).getPropertyValue("left")
-  );
-
-  //Detect Collision
-  if (cactusLeft < 24 && cactusLeft > 0 && ghostTop >= 34) {
-    alert("Game Over!");
-  }
-}, 10);
-
-document.addEventListener("keydown", function (event) {
-  jump();
-});
